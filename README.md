@@ -18,15 +18,16 @@ Managing multiple AI tools across different interfaces (CLI, web, IDE) can get d
 
 | Tool | Web | CLI | IDE Support |
 |---|---|---|---|
-| Claude | ✅ | ✅ `claude` | Kiro, Cursor, VS Code, Visual Studio, Antigravity |
 | ChatGPT / Codex | ✅ | ✅ `codex` | Cursor, VS Code, Visual Studio, Antigravity, Kiro |
+| Claude | ✅ | ✅ `claude` | Kiro, Cursor, VS Code, Visual Studio, Antigravity |
 | Gemini | ✅ | ✅ `gemini` | VS Code, Cursor, Visual Studio, Antigravity, Kiro |
+| Groq | ✅ | via `curl` | VS Code, Cursor, Kiro |
 | Grok | ✅ | API only | VS Code, Cursor, Antigravity, Kiro |
-| NotebookLM | ✅ | ❌ | None |
-| MiniMax | ✅ | API only | VS Code, Cursor, Kiro |
-| OpenRouter | ✅ | via `curl` | VS Code, Cursor, Kiro, Antigravity |
 | Kiro | ✅ | ✅ `kiro` | Kiro IDE, VS Code, Cursor, Visual Studio, Antigravity |
+| MiniMax | ✅ | API only | VS Code, Cursor, Kiro |
+| NotebookLM | ✅ | ❌ | None |
 | Ollama | ✅ | ✅ `ollama` | VS Code (Continue), Cursor, Visual Studio, Kiro, Antigravity |
+| OpenRouter | ✅ | via `curl` | VS Code, Cursor, Kiro, Antigravity |
 
 See [TOOLS.md](TOOLS.md) for full details on each tool.
 

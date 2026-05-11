@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.2.0] - 2026-05-11
+
+### Added
+- Groq card (Groq Cloud · console.groq.com) with curl CLI reference and IDE badges
+
+### Changed
+- Cards sorted alphabetically: ChatGPT/Codex, Claude, Gemini, Groq, Grok, Kiro, MiniMax, NotebookLM, Ollama, OpenRouter
+- README tools table updated to match alphabetical order
+
+---
+
 ## [1.1.0] - 2026-05-11
 
 ### Added

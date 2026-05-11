@@ -163,40 +163,6 @@
 
 <div class="grid">
 
-  <!-- Claude -->
-  <div class="card">
-    <div class="card-header">
-      <div class="card-icon" style="background:#1a2a4a;color:#a78bfa;">C</div>
-      <div>
-        <div class="card-title">Claude</div>
-        <div class="card-subtitle">Anthropic · claude.ai</div>
-      </div>
-    </div>
-    <div>
-      <div class="section-label">Web</div>
-      <a class="launch-btn" href="https://claude.ai" target="_blank">🌐 Open Claude</a>
-    </div>
-    <div>
-      <div class="section-label">CLI Commands</div>
-      <div class="cli-block"><code>claude</code><button class="copy-btn" onclick="copyCmd(this,'claude')">Copy</button></div>
-      <div class="cli-block" style="margin-top:6px"><code>claude --help</code><button class="copy-btn" onclick="copyCmd(this,'claude --help')">Copy</button></div>
-    </div>
-    <div>
-      <div class="section-label">IDE Support</div>
-      <div class="ide-list">
-        <span class="ide-badge native">Kiro (native)</span>
-        <span class="ide-badge native">Cursor (native)</span>
-        <span class="ide-badge">VS Code (ext)</span>
-        <span class="ide-badge">Visual Studio (ext)</span>
-        <span class="ide-badge">Antigravity</span>
-      </div>
-    </div>
-    <div>
-      <div class="section-label">Notes / Reminders</div>
-      <textarea class="notes-field" placeholder="e.g. API key location, custom flags, tips..."></textarea>
-    </div>
-  </div>
-
   <!-- ChatGPT / OpenAI Codex -->
   <div class="card">
     <div class="card-header">
@@ -208,7 +174,7 @@
     </div>
     <div>
       <div class="section-label">Web</div>
-      <a class="launch-btn" href="https://chatgpt.com" target="_blank">🌐 Open ChatGPT</a>
+      <a class="launch-btn" href="https://chatgpt.com" target="_blank">&#127760; Open ChatGPT</a>
     </div>
     <div>
       <div class="section-label">CLI Commands</div>
@@ -231,6 +197,40 @@
     </div>
   </div>
 
+  <!-- Claude -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon" style="background:#1a2a4a;color:#a78bfa;">C</div>
+      <div>
+        <div class="card-title">Claude</div>
+        <div class="card-subtitle">Anthropic · claude.ai</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Web</div>
+      <a class="launch-btn" href="https://claude.ai" target="_blank">&#127760; Open Claude</a>
+    </div>
+    <div>
+      <div class="section-label">CLI Commands</div>
+      <div class="cli-block"><code>claude</code><button class="copy-btn" onclick="copyCmd(this,'claude')">Copy</button></div>
+      <div class="cli-block" style="margin-top:6px"><code>claude --help</code><button class="copy-btn" onclick="copyCmd(this,'claude --help')">Copy</button></div>
+    </div>
+    <div>
+      <div class="section-label">IDE Support</div>
+      <div class="ide-list">
+        <span class="ide-badge native">Kiro (native)</span>
+        <span class="ide-badge native">Cursor (native)</span>
+        <span class="ide-badge">VS Code (ext)</span>
+        <span class="ide-badge">Visual Studio (ext)</span>
+        <span class="ide-badge">Antigravity</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Notes / Reminders</div>
+      <textarea class="notes-field" placeholder="e.g. API key location, custom flags, tips..."></textarea>
+    </div>
+  </div>
+
   <!-- Gemini -->
   <div class="card">
     <div class="card-header">
@@ -242,7 +242,7 @@
     </div>
     <div>
       <div class="section-label">Web</div>
-      <a class="launch-btn" href="https://gemini.google.com" target="_blank">🌐 Open Gemini</a>
+      <a class="launch-btn" href="https://gemini.google.com" target="_blank">&#127760; Open Gemini</a>
     </div>
     <div>
       <div class="section-label">CLI Commands</div>
@@ -265,6 +265,37 @@
     </div>
   </div>
 
+  <!-- Groq -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon" style="background:#1a1a2e;color:#f97316;">G</div>
+      <div>
+        <div class="card-title">Groq</div>
+        <div class="card-subtitle">Groq Cloud · console.groq.com</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Web</div>
+      <a class="launch-btn" href="https://console.groq.com" target="_blank">&#127760; Open Groq</a>
+    </div>
+    <div>
+      <div class="section-label">CLI Commands</div>
+      <div class="cli-block"><code>curl https://api.groq.com/openai/v1/chat/completions</code><button class="copy-btn" onclick="copyCmd(this,'curl https://api.groq.com/openai/v1/chat/completions')">Copy</button></div>
+    </div>
+    <div>
+      <div class="section-label">IDE Support</div>
+      <div class="ide-list">
+        <span class="ide-badge">VS Code (ext)</span>
+        <span class="ide-badge">Cursor (via API)</span>
+        <span class="ide-badge">Kiro (via API)</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Notes / Reminders</div>
+      <textarea class="notes-field" placeholder="e.g. API key, preferred model (llama3-70b-8192), rate limits..."></textarea>
+    </div>
+  </div>
+
   <!-- Grok -->
   <div class="card">
     <div class="card-header">
@@ -276,11 +307,11 @@
     </div>
     <div>
       <div class="section-label">Web</div>
-      <a class="launch-btn" href="https://grok.com" target="_blank">🌐 Open Grok</a>
+      <a class="launch-btn" href="https://grok.com" target="_blank">&#127760; Open Grok</a>
     </div>
     <div>
       <div class="section-label">CLI Commands</div>
-      <span class="no-cli">No official CLI — accessible via API or OpenRouter</span>
+      <span class="no-cli">No official CLI -- accessible via API or OpenRouter</span>
     </div>
     <div>
       <div class="section-label">IDE Support</div>
@@ -297,32 +328,38 @@
     </div>
   </div>
 
-  <!-- NotebookLM -->
+  <!-- Kiro -->
   <div class="card">
     <div class="card-header">
-      <div class="card-icon" style="background:#1a2a1a;color:#86efac;">N</div>
+      <div class="card-icon" style="background:#0a1a2a;color:#38bdf8;">K</div>
       <div>
-        <div class="card-title">NotebookLM</div>
-        <div class="card-subtitle">Google · notebooklm.google.com</div>
+        <div class="card-title">Kiro</div>
+        <div class="card-subtitle">AWS Kiro CLI · AI dev agent</div>
       </div>
     </div>
     <div>
       <div class="section-label">Web</div>
-      <a class="launch-btn" href="https://notebooklm.google.com" target="_blank">🌐 Open NotebookLM</a>
+      <a class="launch-btn" href="https://kiro.dev" target="_blank">&#127760; Kiro Docs</a>
     </div>
     <div>
       <div class="section-label">CLI Commands</div>
-      <span class="no-cli">Web only — no CLI available</span>
+      <div class="cli-block"><code>kiro</code><button class="copy-btn" onclick="copyCmd(this,'kiro')">Copy</button></div>
+      <div class="cli-block" style="margin-top:6px"><code>kiro chat</code><button class="copy-btn" onclick="copyCmd(this,'kiro chat')">Copy</button></div>
+      <div class="cli-block" style="margin-top:6px"><code>kiro --help</code><button class="copy-btn" onclick="copyCmd(this,'kiro --help')">Copy</button></div>
     </div>
     <div>
       <div class="section-label">IDE Support</div>
       <div class="ide-list">
-        <span class="no-cli">No IDE integration available</span>
+        <span class="ide-badge native">Kiro IDE (native)</span>
+        <span class="ide-badge">VS Code (ext)</span>
+        <span class="ide-badge">Cursor</span>
+        <span class="ide-badge">Visual Studio</span>
+        <span class="ide-badge">Antigravity</span>
       </div>
     </div>
     <div>
       <div class="section-label">Notes / Reminders</div>
-      <textarea class="notes-field" placeholder="e.g. notebook links, use cases, tips..."></textarea>
+      <textarea class="notes-field" placeholder="e.g. session tips, context commands, shortcuts..."></textarea>
     </div>
   </div>
 
@@ -337,11 +374,11 @@
     </div>
     <div>
       <div class="section-label">Web</div>
-      <a class="launch-btn" href="https://www.minimaxi.com" target="_blank">🌐 Open MiniMax</a>
+      <a class="launch-btn" href="https://www.minimaxi.com" target="_blank">&#127760; Open MiniMax</a>
     </div>
     <div>
       <div class="section-label">CLI Commands</div>
-      <span class="no-cli">API access only — no official CLI</span>
+      <span class="no-cli">API access only -- no official CLI</span>
     </div>
     <div>
       <div class="section-label">IDE Support</div>
@@ -357,42 +394,39 @@
     </div>
   </div>
 
-  <!-- OpenRouter -->
+  <!-- NotebookLM -->
   <div class="card">
     <div class="card-header">
-      <div class="card-icon" style="background:#1a2a2a;color:#34d399;">O</div>
+      <div class="card-icon" style="background:#1a2a1a;color:#86efac;">N</div>
       <div>
-        <div class="card-title">OpenRouter</div>
-        <div class="card-subtitle">openrouter.ai · multi-model gateway</div>
+        <div class="card-title">NotebookLM</div>
+        <div class="card-subtitle">Google · notebooklm.google.com</div>
       </div>
     </div>
     <div>
       <div class="section-label">Web</div>
-      <a class="launch-btn" href="https://openrouter.ai" target="_blank">🌐 Open OpenRouter</a>
+      <a class="launch-btn" href="https://notebooklm.google.com" target="_blank">&#127760; Open NotebookLM</a>
     </div>
     <div>
       <div class="section-label">CLI Commands</div>
-      <div class="cli-block"><code>curl https://openrouter.ai/api/v1/chat/completions</code><button class="copy-btn" onclick="copyCmd(this,'curl https://openrouter.ai/api/v1/chat/completions')">Copy</button></div>
+      <span class="no-cli">Web only -- no CLI available</span>
     </div>
     <div>
       <div class="section-label">IDE Support</div>
       <div class="ide-list">
-        <span class="ide-badge">VS Code (via API key)</span>
-        <span class="ide-badge">Cursor (via API key)</span>
-        <span class="ide-badge">Kiro (via API key)</span>
-        <span class="ide-badge">Antigravity</span>
+        <span class="no-cli">No IDE integration available</span>
       </div>
     </div>
     <div>
       <div class="section-label">Notes / Reminders</div>
-      <textarea class="notes-field" placeholder="e.g. API key, preferred models, rate limits..."></textarea>
+      <textarea class="notes-field" placeholder="e.g. notebook links, use cases, tips..."></textarea>
     </div>
   </div>
 
   <!-- Ollama -->
   <div class="card">
     <div class="card-header">
-      <div class="card-icon" style="background:#1a1a1a;color:#e2e8f0;">🦙</div>
+      <div class="card-icon" style="background:#1a1a1a;color:#e2e8f0;">&#129433;</div>
       <div>
         <div class="card-title">Ollama</div>
         <div class="card-subtitle">Local LLMs · ollama.com</div>
@@ -400,7 +434,7 @@
     </div>
     <div>
       <div class="section-label">Web</div>
-      <a class="launch-btn" href="https://ollama.com" target="_blank">🌐 Ollama Site</a>
+      <a class="launch-btn" href="https://ollama.com" target="_blank">&#127760; Ollama Site</a>
     </div>
     <div>
       <div class="section-label">CLI Commands</div>
@@ -425,38 +459,35 @@
     </div>
   </div>
 
-  <!-- Kiro -->
+  <!-- OpenRouter -->
   <div class="card">
     <div class="card-header">
-      <div class="card-icon" style="background:#0a1a2a;color:#38bdf8;">K</div>
+      <div class="card-icon" style="background:#1a2a2a;color:#34d399;">O</div>
       <div>
-        <div class="card-title">Kiro</div>
-        <div class="card-subtitle">AWS Kiro CLI · AI dev agent</div>
+        <div class="card-title">OpenRouter</div>
+        <div class="card-subtitle">openrouter.ai · multi-model gateway</div>
       </div>
     </div>
     <div>
       <div class="section-label">Web</div>
-      <a class="launch-btn" href="https://kiro.dev" target="_blank">🌐 Kiro Docs</a>
+      <a class="launch-btn" href="https://openrouter.ai" target="_blank">&#127760; Open OpenRouter</a>
     </div>
     <div>
       <div class="section-label">CLI Commands</div>
-      <div class="cli-block"><code>kiro</code><button class="copy-btn" onclick="copyCmd(this,'kiro')">Copy</button></div>
-      <div class="cli-block" style="margin-top:6px"><code>kiro chat</code><button class="copy-btn" onclick="copyCmd(this,'kiro chat')">Copy</button></div>
-      <div class="cli-block" style="margin-top:6px"><code>kiro --help</code><button class="copy-btn" onclick="copyCmd(this,'kiro --help')">Copy</button></div>
+      <div class="cli-block"><code>curl https://openrouter.ai/api/v1/chat/completions</code><button class="copy-btn" onclick="copyCmd(this,'curl https://openrouter.ai/api/v1/chat/completions')">Copy</button></div>
     </div>
     <div>
       <div class="section-label">IDE Support</div>
       <div class="ide-list">
-        <span class="ide-badge native">Kiro IDE (native)</span>
-        <span class="ide-badge">VS Code (ext)</span>
-        <span class="ide-badge">Cursor</span>
-        <span class="ide-badge">Visual Studio</span>
+        <span class="ide-badge">VS Code (via API key)</span>
+        <span class="ide-badge">Cursor (via API key)</span>
+        <span class="ide-badge">Kiro (via API key)</span>
         <span class="ide-badge">Antigravity</span>
       </div>
     </div>
     <div>
       <div class="section-label">Notes / Reminders</div>
-      <textarea class="notes-field" placeholder="e.g. session tips, context commands, shortcuts..."></textarea>
+      <textarea class="notes-field" placeholder="e.g. API key, preferred models, rate limits..."></textarea>
     </div>
   </div>
 
