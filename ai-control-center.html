@@ -152,6 +152,54 @@
 
   /* No CLI tag */
   .no-cli { font-size: 0.8rem; color: #3a5a7a; font-style: italic; }
+
+  /* Subscription fields */
+  .sub-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .sub-input {
+    flex: 1;
+    background: #071525;
+    border: 1px solid #1a3050;
+    border-radius: 6px;
+    color: #a0c0e0;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.82rem;
+    padding: 6px 10px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .sub-input:focus { border-color: #2a6090; }
+  .sub-input::placeholder { color: #2a4a6a; }
+  .expiry-input {
+    background: #071525;
+    border: 1px solid #1a3050;
+    border-radius: 6px;
+    color: #a0c0e0;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.82rem;
+    padding: 6px 10px;
+    outline: none;
+    transition: border-color 0.2s;
+    color-scheme: dark;
+  }
+  .expiry-input:focus { border-color: #2a6090; }
+
+  /* Expiry warning states */
+  .card.expiry-soon { border-color: #b45309; box-shadow: 0 0 0 1px #b45309; }
+  .card.expiry-soon .expiry-badge { background: #78350f; color: #fcd34d; }
+  .card.expiry-expired { border-color: #991b1b; box-shadow: 0 0 0 1px #991b1b; }
+  .card.expiry-expired .expiry-badge { background: #7f1d1d; color: #fca5a5; }
+  .expiry-badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    display: none;
+  }
+  .expiry-badge.visible { display: inline-block; }
 </style>
 </head>
 <body>
@@ -192,6 +240,14 @@
       </div>
     </div>
     <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Plus · $20/mo">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
+      </div>
+    </div>
+    <div>
       <div class="section-label">Notes / Reminders</div>
       <textarea class="notes-field" placeholder="e.g. API key location, custom flags, tips..."></textarea>
     </div>
@@ -226,8 +282,56 @@
       </div>
     </div>
     <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Pro · $20/mo">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
+      </div>
+    </div>
+    <div>
       <div class="section-label">Notes / Reminders</div>
       <textarea class="notes-field" placeholder="e.g. API key location, custom flags, tips..."></textarea>
+    </div>
+  </div>
+
+  <!-- DeepSeek -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon" style="background:#0a1a2a;color:#38bdf8;">D</div>
+      <div>
+        <div class="card-title">DeepSeek</div>
+        <div class="card-subtitle">deepseek.com · reasoning &amp; code models</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Web</div>
+      <a class="launch-btn" href="https://chat.deepseek.com" target="_blank">&#127760; Open DeepSeek</a>
+    </div>
+    <div>
+      <div class="section-label">CLI Commands</div>
+      <div class="cli-block"><code>curl https://api.deepseek.com/chat/completions</code><button class="copy-btn" onclick="copyCmd(this,'curl https://api.deepseek.com/chat/completions')">Copy</button></div>
+    </div>
+    <div>
+      <div class="section-label">IDE Support</div>
+      <div class="ide-list">
+        <span class="ide-badge">VS Code (Continue)</span>
+        <span class="ide-badge">Cursor (via API)</span>
+        <span class="ide-badge">Kiro (via API)</span>
+        <span class="ide-badge">JetBrains (Continue)</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Free / API pay-per-use">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Notes / Reminders</div>
+      <textarea class="notes-field" placeholder="e.g. API key, preferred model (deepseek-chat, deepseek-reasoner)..."></textarea>
     </div>
   </div>
 
@@ -257,6 +361,93 @@
         <span class="ide-badge">Visual Studio (ext)</span>
         <span class="ide-badge">Antigravity</span>
         <span class="ide-badge">Kiro (via API)</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Advanced · $19.99/mo">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Notes / Reminders</div>
+      <textarea class="notes-field" placeholder="e.g. API key location, custom flags, tips..."></textarea>
+    </div>
+  </div>
+
+  <!-- Google AI Studio -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon" style="background:#1a2a1a;color:#34d399;">G</div>
+      <div>
+        <div class="card-title">Google AI Studio</div>
+        <div class="card-subtitle">Google · aistudio.google.com</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Web</div>
+      <a class="launch-btn" href="https://aistudio.google.com" target="_blank">&#127760; Open AI Studio</a>
+    </div>
+    <div>
+      <div class="section-label">CLI Commands</div>
+      <span class="no-cli">Web only -- use Gemini CLI for terminal access</span>
+    </div>
+    <div>
+      <div class="section-label">IDE Support</div>
+      <div class="ide-list">
+        <span class="ide-badge native">VS Code (Gemini Code Assist)</span>
+        <span class="ide-badge native">JetBrains (Gemini Code Assist)</span>
+        <span class="ide-badge">Cursor (via API)</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Free tier">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Notes / Reminders</div>
+      <textarea class="notes-field" placeholder="e.g. API key, project ID, preferred model..."></textarea>
+    </div>
+  </div>
+
+  <!-- Grok -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon" style="background:#2a1a1a;color:#f87171;">X</div>
+      <div>
+        <div class="card-title">Grok</div>
+        <div class="card-subtitle">xAI · grok.com</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Web</div>
+      <a class="launch-btn" href="https://grok.com" target="_blank">&#127760; Open Grok</a>
+    </div>
+    <div>
+      <div class="section-label">CLI Commands</div>
+      <span class="no-cli">No official CLI -- accessible via API or OpenRouter</span>
+    </div>
+    <div>
+      <div class="section-label">IDE Support</div>
+      <div class="ide-list">
+        <span class="ide-badge">VS Code (via API)</span>
+        <span class="ide-badge">Cursor (via API)</span>
+        <span class="ide-badge">Antigravity</span>
+        <span class="ide-badge">Kiro (via API)</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. SuperGrok · $30/mo">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
       </div>
     </div>
     <div>
@@ -291,40 +482,56 @@
       </div>
     </div>
     <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Free tier / Pay-as-you-go">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
+      </div>
+    </div>
+    <div>
       <div class="section-label">Notes / Reminders</div>
       <textarea class="notes-field" placeholder="e.g. API key, preferred model (llama3-70b-8192), rate limits..."></textarea>
     </div>
   </div>
 
-  <!-- Grok -->
+  <!-- Kilo Code -->
   <div class="card">
     <div class="card-header">
-      <div class="card-icon" style="background:#2a1a1a;color:#f87171;">X</div>
+      <div class="card-icon" style="background:#1a2a1a;color:#a3e635;">K</div>
       <div>
-        <div class="card-title">Grok</div>
-        <div class="card-subtitle">xAI · grok.com</div>
+        <div class="card-title">Kilo Code</div>
+        <div class="card-subtitle">kilo.ai · open-source AI coding agent</div>
       </div>
     </div>
     <div>
       <div class="section-label">Web</div>
-      <a class="launch-btn" href="https://grok.com" target="_blank">&#127760; Open Grok</a>
+      <a class="launch-btn" href="https://kilo.ai" target="_blank">&#127760; Open Kilo</a>
     </div>
     <div>
       <div class="section-label">CLI Commands</div>
-      <span class="no-cli">No official CLI -- accessible via API or OpenRouter</span>
+      <div class="cli-block"><code>kilo</code><button class="copy-btn" onclick="copyCmd(this,'kilo')">Copy</button></div>
+      <div class="cli-block" style="margin-top:6px"><code>kilo --help</code><button class="copy-btn" onclick="copyCmd(this,'kilo --help')">Copy</button></div>
     </div>
     <div>
       <div class="section-label">IDE Support</div>
       <div class="ide-list">
-        <span class="ide-badge">VS Code (via API)</span>
-        <span class="ide-badge">Cursor (via API)</span>
-        <span class="ide-badge">Antigravity</span>
-        <span class="ide-badge">Kiro (via API)</span>
+        <span class="ide-badge native">VS Code (native ext)</span>
+        <span class="ide-badge native">JetBrains (native ext)</span>
+        <span class="ide-badge">Cursor</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Pro · $10/mo">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
       </div>
     </div>
     <div>
       <div class="section-label">Notes / Reminders</div>
-      <textarea class="notes-field" placeholder="e.g. API key location, custom flags, tips..."></textarea>
+      <textarea class="notes-field" placeholder="e.g. API key, preferred model, gateway tips..."></textarea>
     </div>
   </div>
 
@@ -358,6 +565,14 @@
       </div>
     </div>
     <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Free preview">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
+      </div>
+    </div>
+    <div>
       <div class="section-label">Notes / Reminders</div>
       <textarea class="notes-field" placeholder="e.g. session tips, context commands, shortcuts..."></textarea>
     </div>
@@ -369,12 +584,12 @@
       <div class="card-icon" style="background:#1a1a2a;color:#c084fc;">M</div>
       <div>
         <div class="card-title">MiniMax</div>
-        <div class="card-subtitle">MiniMax AI · minimaxi.com</div>
+        <div class="card-subtitle">MiniMax AI · platform.minimax.io</div>
       </div>
     </div>
     <div>
       <div class="section-label">Web</div>
-      <a class="launch-btn" href="https://www.minimaxi.com" target="_blank">&#127760; Open MiniMax</a>
+      <a class="launch-btn" href="https://platform.minimax.io/" target="_blank">&#127760; Open MiniMax</a>
     </div>
     <div>
       <div class="section-label">CLI Commands</div>
@@ -386,6 +601,14 @@
         <span class="ide-badge">VS Code (via API)</span>
         <span class="ide-badge">Cursor (via API)</span>
         <span class="ide-badge">Kiro (via API)</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. API credits · pay-as-you-go">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
       </div>
     </div>
     <div>
@@ -415,6 +638,14 @@
       <div class="section-label">IDE Support</div>
       <div class="ide-list">
         <span class="no-cli">No IDE integration available</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Free / NotebookLM Plus">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
       </div>
     </div>
     <div>
@@ -454,8 +685,56 @@
       </div>
     </div>
     <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Free / self-hosted">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
+      </div>
+    </div>
+    <div>
       <div class="section-label">Notes / Reminders</div>
       <textarea class="notes-field" placeholder="e.g. installed models, local API port (11434), tips..."></textarea>
+    </div>
+  </div>
+
+  <!-- OpenCode -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon" style="background:#1a1a2a;color:#fb923c;">O</div>
+      <div>
+        <div class="card-title">OpenCode</div>
+        <div class="card-subtitle">opencode.ai · open-source terminal agent</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Web</div>
+      <a class="launch-btn" href="https://opencode.ai" target="_blank">&#127760; OpenCode Site</a>
+    </div>
+    <div>
+      <div class="section-label">CLI Commands</div>
+      <div class="cli-block"><code>opencode</code><button class="copy-btn" onclick="copyCmd(this,'opencode')">Copy</button></div>
+      <div class="cli-block" style="margin-top:6px"><code>opencode --help</code><button class="copy-btn" onclick="copyCmd(this,'opencode --help')">Copy</button></div>
+    </div>
+    <div>
+      <div class="section-label">IDE Support</div>
+      <div class="ide-list">
+        <span class="ide-badge native">VS Code (ACP ext)</span>
+        <span class="ide-badge">Cursor (ACP)</span>
+        <span class="ide-badge">JetBrains (ACP)</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Free / open-source">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Notes / Reminders</div>
+      <textarea class="notes-field" placeholder="e.g. provider API keys, preferred model, install: npm i -g opencode-ai..."></textarea>
     </div>
   </div>
 
@@ -486,6 +765,14 @@
       </div>
     </div>
     <div>
+      <div class="section-label">Subscription</div>
+      <div class="sub-row">
+        <input class="sub-input" type="text" placeholder="e.g. Pay-as-you-go / credits">
+        <input class="expiry-input" type="date">
+        <span class="expiry-badge"></span>
+      </div>
+    </div>
+    <div>
       <div class="section-label">Notes / Reminders</div>
       <textarea class="notes-field" placeholder="e.g. API key, preferred models, rate limits..."></textarea>
     </div>
@@ -513,6 +800,45 @@
     const key = 'ai-notes-' + i;
     ta.value = localStorage.getItem(key) || '';
     ta.addEventListener('input', () => localStorage.setItem(key, ta.value));
+  });
+
+  // Subscription + expiry persistence and warning logic
+  function applyExpiryWarning(card, expiryVal) {
+    card.classList.remove('expiry-soon', 'expiry-expired');
+    const badge = card.querySelector('.expiry-badge');
+    badge.classList.remove('visible');
+    if (!expiryVal) return;
+    const today = new Date(); today.setHours(0,0,0,0);
+    const exp = new Date(expiryVal); exp.setHours(0,0,0,0);
+    const days = Math.round((exp - today) / 86400000);
+    if (days < 0) {
+      card.classList.add('expiry-expired');
+      badge.textContent = 'Expired';
+      badge.classList.add('visible');
+    } else if (days <= 30) {
+      card.classList.add('expiry-soon');
+      badge.textContent = days === 0 ? 'Expires today' : 'Expires in ' + days + 'd';
+      badge.classList.add('visible');
+    }
+  }
+
+  document.querySelectorAll('.card').forEach((card, i) => {
+    const subInput = card.querySelector('.sub-input');
+    const expiryInput = card.querySelector('.expiry-input');
+    if (!subInput || !expiryInput) return;
+
+    const subKey = 'ai-sub-' + i;
+    const expKey = 'ai-exp-' + i;
+
+    subInput.value = localStorage.getItem(subKey) || '';
+    expiryInput.value = localStorage.getItem(expKey) || '';
+    applyExpiryWarning(card, expiryInput.value);
+
+    subInput.addEventListener('input', () => localStorage.setItem(subKey, subInput.value));
+    expiryInput.addEventListener('change', () => {
+      localStorage.setItem(expKey, expiryInput.value);
+      applyExpiryWarning(card, expiryInput.value);
+    });
   });
 </script>
 </body>
